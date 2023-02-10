@@ -1,7 +1,8 @@
 import streamlit
 import pandas
 import requests
-import snowflake.connector.python
+import snowflake.connector
+from urllib.error import URLError
 streamlit.title('my parent new healthy dinner')
 streamlit.header('Breakfast Menu')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
@@ -16,6 +17,7 @@ fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 # Display the table on the page.
 streamlit.dataframe(fruits_to_show)
+
 #new section to diplay fruitvice api reposne
 streamlit.header("Fruityvice Fruit Advice!")
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
