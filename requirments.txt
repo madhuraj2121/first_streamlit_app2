@@ -1,5 +1,1 @@
-#requirments.txt
-snowflake-connector-python
-#cffi==1.15.0
-#pyarrow==6.0.1
-#pip install snowflake-connector-python
+-r https://raw.githubusercontent.com/snowflakedb/snowflake-connector-python/v2.7.9/tested_requirements/requirements_39.reqs
