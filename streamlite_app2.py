@@ -32,3 +32,14 @@ my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
 my_data_row = my_cur.fetchone()
 streamlit.text("Hello from Snowflake:")
 streamlit.text(my_data_row)
+
+@streamlit.experimental_singleton
+def init_connection():
+return snowflake.connector.connect(user = "madhuraj7972"
+password = "Madhu@2121"
+account = "BC61520.ca-central-1.aws" 
+warehouse = "COMPUTE_WH"
+database = "PC_RIVERY_DB" 
+schema = "public")
+
+conn = init_connection()
